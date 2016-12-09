@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ibook.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".onboard.Splash"
+            android:theme="@style/Theme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".onboard.OnBoard"
+            android:launchMode="singleTop"
+            android:parentActivityName=".onboard.AccountSetUp"
+            android:theme="@style/Theme.FullScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".onboard.AccountSetUp" />
+        </activity>
+        <activity
+            android:name=".main.Home"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name=".onboard.AccountSetUp"
+            android:parentActivityName=".main.Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.Home" />
+        </activity>
+        <activity
+            android:name=".main.Subject"
+            android:parentActivityName=".main.Home"
+            android:theme="@style/AppThemeExams">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.Home" />
+        </activity>
+        <activity
+            android:name=".main.ExamsPrep"
+            android:parentActivityName=".main.Home"
+            android:theme="@style/AppThemeExams">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.Home" />
+        </activity>
+        <activity
+            android:name=".main.Quiz"
+            android:theme="@style/AppThemeExams">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.Home" />
+        </activity>
+        <activity
+            android:name=".main.SuccessError"
+            android:theme="@style/AppThemeExams">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.Home" />
+        </activity>
+    </application>
+
+</manifest>

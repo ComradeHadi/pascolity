@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Pascolity</string>
+
+    <string name="title_one">Download Ebooks</string>
+    <string name="title_two">Try Wassce Exams</string>
+    <string name="title_three">Automated Teacher</string>
+    <string name="message_one">Browse and download all our intuitive e-books for your studies</string>
+    <string name="message_three">Be your own taecher by taking and automatically marking your papers</string>
+
+    <string name="page_login">SIGN IN</string>
+    <string name="page_register">REGISTER</string>
+    <string name="page_title">Access to Pasco</string>
+
+    <string name="page_main_e_book">E-Book</string>
+    <string name="page_main_exam">Exams</string>
+
+    <string name="subject_hint">There are 10 subjects here, choose on to begin</string>
+
+
+    <string-array name="colors" translatable="false">
+        <item>#cc0000</item>
+        <item>#df5948</item>
+        <item>#ff4444</item>
+        <item>#ae6b23</item>
+        <item>#ff8800</item>
+        <item>#e5ae4f</item>
+        <item>#ffbb33</item>
+        <item>#0099CC</item>
+        <item>#33B5E5</item>
+        <item>#669900</item>
+        <item>#99CC00</item>
+        <item>#9933CC</item>
+        <item>#AA66CC</item>
+        <item>#FF8800</item>
+        <item>#FFBB33</item>
+        <item>#CC0000</item>
+        <item>#FF4444</item>
+        <item>#3b5998</item>
+        <item>#55ACEE</item>
+        <item>#607D8B</item>
+        <item>#FF5722</item>
+        <item>#795548</item>
+        <item>#673AB7</item>
+    </string-array>
+
+
+</resources>

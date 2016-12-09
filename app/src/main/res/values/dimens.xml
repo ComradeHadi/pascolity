@@ -1,0 +1,30 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="page_header">150dp</dimen>
+    <dimen name="bar_elevation">0dp</dimen>
+    <dimen name="logo_step_one_border">10dp</dimen>
+    <dimen name="logo_step_two_border">15dp</dimen>
+    <dimen name="logo_step_one_height">100dp</dimen>
+    <dimen name="logo_step_two_height">160dp</dimen>
+    <dimen name="logo_height">50dp</dimen>
+    <dimen name="small_margin">10dp</dimen>
+    <dimen name="smaller_margin">5dp</dimen>
+    <dimen name="book_item_spacing">5dp</dimen>
+    <dimen name="tabIndicatorHeight">2dp</dimen>
+    <dimen name="book_preview_width">160dp</dimen>
+    <dimen name="book_preview_height">150dp</dimen>
+    <dimen name="book_download_button">50dp</dimen>
+    <dimen name="book_owner">40dp</dimen>
+    <dimen name="book_border">2dp</dimen>
+
+
+    <dimen name="edit_text_radius">30dp</dimen>
+    <dimen name="edit_text_stroke">1dp</dimen>
+    <dimen name="edit_text_margin">30dp</dimen>
+
+
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_exams_prep"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryExams"
+    tools:context="com.ibook.app.main.ExamsPrep">
+
+    <include layout="@layout/toolbar_exams" />
+
+    <pl.bclogic.pulsator4droid.library.PulsatorLayout
+        android:id="@+id/pulsator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:pulse_color="@color/colorAccent"
+        app:pulse_count="4"
+        app:pulse_duration="7000"
+        app:pulse_interpolator="Linear"
+        app:pulse_repeat="0"
+        app:pulse_startFromScratch="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imageViewCenter"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:text="Preparing Questions"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+
+            <com.makeramen.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imageViewCenter"
+                android:layout_width="@dimen/logo_step_one_height"
+                android:layout_height="@dimen/logo_step_one_height"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@color/colorAccent"
+                android:visibility="visible"
+                app:border_color="@color/colorAccent"
+                app:border_width="0dp"
+                app:corner_radius="@dimen/logo_step_one_height"
+                app:oval="false" />
+
+            <TextView
+                android:id="@+id/textViewType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewCenter"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:text="2010 WASSCE"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewType"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/button_primary_bg"
+                android:text="READY"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorPrimaryExams"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+
+</RelativeLayout>
