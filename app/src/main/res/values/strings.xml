@@ -13,6 +13,7 @@
 
     <string name="page_main_e_book">E-Book</string>
     <string name="page_main_exam">Exams</string>
+    <string name="page_main_questions">Questions</string>
 
     <string name="subject_hint">There are 10 subjects here, choose on to begin</string>
 

@@ -12,6 +12,7 @@ import com.ibook.app.R;
 import com.ibook.app.fragment.FragmentEBook;
 import com.ibook.app.fragment.FragmentExam;
 import com.ibook.app.fragment.FragmentLogin;
+import com.ibook.app.fragment.FragmentQuestions;
 import com.ibook.app.fragment.FragmentRegister;
 import com.ibook.app.help.Base;
 import com.ibook.app.onboard.AccountSetUp;
@@ -36,6 +37,7 @@ public class Home extends Base {
     protected void setUpWidget() {
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.page_main_e_book)));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.page_main_questions)));
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.page_main_exam)));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
@@ -80,8 +82,11 @@ public class Home extends Base {
         public CharSequence getPageTitle(int position) {
             String title = getString(R.string.app_name);
             switch (position) {
-                case 1:
+                case 2:
                     title = getString(R.string.page_main_exam);
+                    break;
+                case 1:
+                    title = getString(R.string.page_main_questions);
                     break;
                 case 0:
                     title = getString(R.string.page_main_e_book);
@@ -97,8 +102,11 @@ public class Home extends Base {
         public Fragment getItem(int position) {
             Fragment fragment = null;
             switch (position) {
-                case 1:
+                case 2:
                     fragment = new FragmentExam();
+                    break;
+                case 1:
+                    fragment = new FragmentQuestions();
                     break;
                 case 0:
                     fragment = new FragmentEBook();

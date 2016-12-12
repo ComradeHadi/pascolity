@@ -11,8 +11,10 @@ import com.ibook.app.R;
 import com.ibook.app.adapter.item.Book;
 import com.ibook.app.adapter.item.ExamsSubject;
 import com.ibook.app.adapter.item.ExamsYear;
+import com.ibook.app.adapter.item.Questions;
 import com.ibook.app.adapter.viewholder.BookViewHolder;
 import com.ibook.app.adapter.viewholder.ExamsYearViewHolder;
+import com.ibook.app.adapter.viewholder.QuestionViewHolder;
 import com.ibook.app.adapter.viewholder.SubjectViewHolder;
 import com.ibook.app.help.AppUtils;
 import com.ibook.app.main.ExamsPrep;
@@ -93,6 +95,56 @@ public class SetUp {
 
         textViewName.setText(subject.getName());
         imageViewIcon.setImageResource(subject.getIcon());
+
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppUtils.navigateUpKeep(activity, ExamsPrep.class, null);
+            }
+        });
+
+
+    }
+
+    public static void question(QuestionViewHolder questionViewHolder, Questions questions, int position, final Activity activity) {
+
+        View view = questionViewHolder.itemView;
+        Context context = view.getContext();
+        TextView textViewName = questionViewHolder.getTextViewName();
+        TextView textViewVotes = questionViewHolder.getTextViewName();
+        TextView textViewQuestions = questionViewHolder.getTextViewQuestion();
+        TextView textViewElapsedTime = questionViewHolder.getTextViewDatePublished();
+        ImageView imageViewUp = questionViewHolder.getImageViewUp();
+        ImageView imageViewDown = questionViewHolder.getImageViewDown();
+        ImageView imageViewUser = questionViewHolder.getImageViewUser();
+
+        textViewElapsedTime.setText(questions.getElapsedTime());
+        textViewQuestions.setText(questions.getQuestion());
+        textViewName.setText(questions.getUser().getName());
+        textViewVotes.setText(questions.getVotes() + " Votes");
+
+        String avatar = questions.getUser().getProfile();
+        if (avatar != null && !avatar.isEmpty()) {
+            Picasso.with(imageViewUser.getContext()).load(avatar).placeholder(R.color.colorGrey).into(imageViewUser);
+        } else {
+            Picasso.with(imageViewUser.getContext()).load(R.color.colorGrey).placeholder(R.color.colorGrey).into(imageViewUser);
+        }
+
+        imageViewDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //down vote action
+            }
+        });
+
+
+        imageViewUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //up vote action
+            }
+        });
 
 
         view.setOnClickListener(new View.OnClickListener() {

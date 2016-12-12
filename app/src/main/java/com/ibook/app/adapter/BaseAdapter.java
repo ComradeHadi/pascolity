@@ -12,8 +12,10 @@ import com.ibook.app.R;
 import com.ibook.app.adapter.item.Book;
 import com.ibook.app.adapter.item.ExamsSubject;
 import com.ibook.app.adapter.item.ExamsYear;
+import com.ibook.app.adapter.item.Questions;
 import com.ibook.app.adapter.viewholder.BookViewHolder;
 import com.ibook.app.adapter.viewholder.ExamsYearViewHolder;
+import com.ibook.app.adapter.viewholder.QuestionViewHolder;
 import com.ibook.app.adapter.viewholder.SubjectViewHolder;
 
 import java.util.List;
@@ -24,7 +26,7 @@ import java.util.List;
 public class BaseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<Object> items;
     private Activity activity;
-    private final int BOOK = 0, EXAMS_YEAR = 1, SUBJECT = 2;
+    private final int BOOK = 0, EXAMS_YEAR = 1, SUBJECT = 2, QUESTION = 3;
     private int lastPosition = -1;
 
 
@@ -50,6 +52,10 @@ public class BaseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 View subject = inflater.inflate(R.layout.subject_item, viewGroup, false);
                 viewHolder = new SubjectViewHolder(subject);
                 break;
+            case QUESTION:
+                View question = inflater.inflate(R.layout.question_item, viewGroup, false);
+                viewHolder = new QuestionViewHolder(question);
+                break;
         }
         return viewHolder;
     }
@@ -68,6 +74,10 @@ public class BaseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             case SUBJECT:
                 SubjectViewHolder subjectViewHolder = (SubjectViewHolder) holder;
                 SetUp.subject(subjectViewHolder, (ExamsSubject) items.get(position), position, activity);
+                break;
+            case QUESTION:
+                QuestionViewHolder questionViewHolder = (QuestionViewHolder) holder;
+                SetUp.question(questionViewHolder, (Questions) items.get(position), position, activity);
                 break;
         }
 
@@ -98,6 +108,8 @@ public class BaseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             return EXAMS_YEAR;
         } else if (items.get(position) instanceof ExamsSubject) {
             return SUBJECT;
+        } else if (items.get(position) instanceof Questions) {
+            return QUESTION;
         }
         return -1;
     }
