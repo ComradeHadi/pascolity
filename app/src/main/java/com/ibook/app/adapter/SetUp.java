@@ -112,7 +112,7 @@ public class SetUp {
         View view = questionViewHolder.itemView;
         Context context = view.getContext();
         TextView textViewName = questionViewHolder.getTextViewName();
-        TextView textViewVotes = questionViewHolder.getTextViewName();
+        TextView textViewVotes = questionViewHolder.getTextViewVotes();
         TextView textViewQuestions = questionViewHolder.getTextViewQuestion();
         TextView textViewElapsedTime = questionViewHolder.getTextViewDatePublished();
         ImageView imageViewUp = questionViewHolder.getImageViewUp();
