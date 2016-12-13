@@ -62,16 +62,56 @@
 
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/textViewQuestion"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/book_item_spacing"
-            android:layout_marginStart="@dimen/book_item_spacing"
-            android:layout_marginTop="@dimen/book_item_spacing"
-            android:maxLines="4"
-            android:text="@string/app_name"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/book_item_spacing"
+                android:layout_marginLeft="@dimen/book_item_spacing"
+                android:layout_marginRight="@dimen/book_item_spacing"
+                android:layout_marginStart="@dimen/book_item_spacing"
+                android:layout_marginTop="@dimen/book_item_spacing"
+                android:layout_toLeftOf="@+id/linearLayoutAction"
+                android:layout_toStartOf="@+id/linearLayoutAction"
+                android:maxLines="4"
+                android:text="@string/app_name"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_arrow_drop_up" />
+
+
+                <ImageView
+                    android:id="@+id/imageViewDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_arrow_drop_down" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
 
         <View
             android:id="@+id/view"
@@ -83,13 +123,6 @@
             android:alpha="0.5"
             android:background="@color/colorGrey" />
 
-        <ImageView
-            android:id="@+id/imageViewUp"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_arrow_drop_up" />
 
         <TextView
             android:id="@+id/textViewVotes"
@@ -101,15 +134,6 @@
             android:text="12 Votes"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
-
-
-        <ImageView
-            android:id="@+id/imageViewDown"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_arrow_drop_down" />
 
     </LinearLayout>
 
